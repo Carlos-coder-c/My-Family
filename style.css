@@ -1,0 +1,129 @@
+/* ESTILOS GERAIS DA PÁGINA */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; 
+    overflow-x: hidden;
+}
+
+/* ESTILOS DE TÍTULOS */
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 3em;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 2.2em; /* Tamanho para títulos de membros (ex: "Minha Mãe") */
+}
+
+/* ESTILOS DE PARÁGRAFOS */
+p {
+    color: #666;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 15px auto; /* Centraliza e adiciona margem inferior */
+    text-align: center; /* Centraliza o texto do parágrafo */
+}
+
+/* CLASSES PARA ANIMAÇÃO DE ROLAGEM (ESTÃO CORRETAS E UNIFICADAS) */
+.secao-oculta {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.secao-revelada {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ESTILOS PARA CADA SEÇÃO DE MEMBRO DA FAMÍLIA */
+.secao-familia {
+    min-height: 90vh; /* Garante que a seção ocupe boa parte da tela para forçar rolagem */
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Estilo específico para a primeira seção (Início) */
+.secao-inicial {
+    background-color: #e0f7fa;
+    height: 100vh;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+/* Alternar cores de fundo para diferenciar as seções */
+section.secao-familia:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+section.secao-familia:nth-of-type(even) {
+    background-color: #f8f8f8;
+}
+
+/* ESTILOS PARA A FOTO DE CADA MEMBRO (UNIFICADO PARA TODAS AS FOTOS) */
+.foto-membro {
+    width: 200px;
+    height: 650px;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer, cortando se necessário */
+    border-radius: 50%; /* Torna a foto redonda */
+    border: 5px solid #020202; /* Borda rosa */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+/* ESTILOS PARA O CABEÇALHO E NAVEGAÇÃO */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: black; /* Cor do texto dos links de navegação */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* ESTILOS PARA O RODAPÉ */
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #222;
+    color: #aaa;
+    font-size: 0.9em;
+}
